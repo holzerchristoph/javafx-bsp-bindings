@@ -62,7 +62,9 @@ public class Main extends Application {
         r2.xProperty().bind(xPos.subtract(15));
         r2.yProperty().bind(yPos.subtract(15));
 
+        // bind checkbox to collision variable
         chCollision.selectedProperty().bind(collision);
+
         drawPane.setOnMouseMoved(e->{
             xPos.setValue(e.getSceneX());
             yPos.setValue(e.getSceneY());
@@ -92,7 +94,6 @@ public class Main extends Application {
                     offset = 1;
                 }
                 r1.setWidth(r1.getWidth() + offset);
-
 
             }
         }));
